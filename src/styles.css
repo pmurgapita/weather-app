@@ -1,0 +1,176 @@
+@font-face {
+    font-family: "archivoBlack";
+    src: 
+        url("./fonts/ArchivoBlack-Regular.woff2") format("woff2"),
+        url("./fonts/ArchivoBlack-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "interRegular";
+    src: 
+        url("./fonts/Inter-Regular.woff2") format("woff2"),
+        url("./fonts/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "interItalic";
+    src: 
+        url("./fonts/Inter-Italic.woff2") format("woff2"),
+        url("./fonts/Inter-Italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "interThin";
+    src: 
+        url("./fonts/Inter18pt-Thin.woff2") format("woff2"),
+        url("./fonts/Inter18pt-Thin.woff") format("woff");
+}
+
+body {
+    font-family: interRegular;
+    background-color:azure;
+}
+
+.header {
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    gap: 4px;
+    color: cadetblue;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: archivoBlack;
+    font-size: 70px;
+}
+
+input {
+    width: 500px;
+    border-radius: 30px;
+    border: 1px cadetblue;
+    background-color: cadetblue;
+    color: azure;
+    box-shadow: 0px 5px 20px 1px rgb(173, 172, 172);
+    padding: 10px;
+}
+
+input::placeholder {
+    color: rgb(0, 0, 0)
+}
+
+select {
+    width: min-content;
+    border-radius: 30px;
+    border: 0px;
+    background-color: cadetblue;
+    color: azure;
+    box-shadow: 0px 5px 20px 1px rgb(173, 172, 172);
+    padding: 10px;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-self: center;
+    border-radius: 30px;
+    padding: 12px 12px;
+    box-shadow: 0px 5px 20px 1px rgb(173, 172, 172);
+    margin: 20px;
+}
+
+button {
+    border-radius: 30px;
+    background-color: azure;
+    color: black;
+    border: 0px;
+    padding: 20px;
+    font-family: interRegular;
+}
+
+button:hover {
+    background-color: cadetblue;
+    color: azure;
+    cursor: pointer;
+}
+
+button.active {
+    background-color: cadetblue;
+    color: azure;
+}
+
+.headWeather {
+    text-align: center;
+    padding: 20px;
+    font-weight:bolder;
+    font-size: 20px;;
+}
+
+.mainData {
+    position: relative;
+    background-color: cadetblue;
+    background-size: 800px;
+    border-radius: 12px;
+    padding: 20px;
+    width: 50vw;
+    justify-self: center;
+}
+
+.bigTemp {
+    font-size: 70px;
+    color: azure;
+    padding: 0;
+    margin: 0
+}
+
+img {
+    position: absolute;
+    right: 50px;
+}
+
+.hours {
+    padding: 10px 0px;;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.hour {
+    background-color: cadetblue;
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    min-width: 180px;
+    flex-grow: 1;
+}
+
+.time {
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+    top: 2px;
+}
+
+.dayData {
+    position: relative;
+    background-color: cadetblue;
+    background-size: 800px;
+    border-radius: 12px;
+    padding: 20px;
+    width: 50vw;
+    justify-self: center;
+    flex-grow: 1;
+}
+
+.mainData.active {
+    background-color: azure;
+    display: flex;
+    gap: 12px;
+    padding:20px;
+    width: 100vw;
+    flex-wrap: wrap;
+}
