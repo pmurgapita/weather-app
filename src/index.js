@@ -251,8 +251,10 @@ week.addEventListener("click", async () => {
             const dayData = document.createElement("div");
             dayData.classList = "dayData";
 
+            const sideDayData = document.createElement("div");
+
             const date = document.createElement("h5");
-            date.textContent = format(toDate(day.date), "dd 'of' MMMM");
+            date.textContent = format(toDate(day.date), "d 'of' MMMM");
             date.classList = "date";
             dayData.appendChild(date);
 
@@ -271,21 +273,22 @@ week.addEventListener("click", async () => {
 
             const description = document.createElement("p");
             description.textContent = `The weather today is: ${day.description}`;
-            dayData.appendChild(description);
+            sideDayData.appendChild(description);
 
             const temperature = document.createElement("p");
             temperature.textContent = `Temperature will be ${day.temp}º with a min of ${day.tempmin}º and a max of ${day.tempmax}º`;
-            dayData.appendChild(temperature);
+            sideDayData.appendChild(temperature);
 
             const precipitation = document.createElement("p");
             precipitation.textContent = `Precipitation will be: ${day.precip} mm`;
-            dayData.appendChild(precipitation);
+            sideDayData.appendChild(precipitation);
 
             const sunRiseSet = document.createElement("p");
             sunRiseSet.textContent = `The sunrise will be at ${day.sunrise} and the sunset at ${day.sunset}`;
-            dayData.appendChild(sunRiseSet);
+            sideDayData.appendChild(sunRiseSet);
 
             mainData.appendChild(dayData);
+            mainData.appendChild(sideDayData);
         })
     }
 })
